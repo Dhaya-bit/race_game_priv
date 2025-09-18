@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Multiplayer Car Race</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="left">
+      <h1>🚗 Multiplayer Car Race</h1>
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+      <div id="controls">
+        <label>Your name: <input id="nameInput" placeholder="Player" maxlength="20"></label>
+        <span>Controls: W = forward, S = brake, A/D = turn, Click = boost</span>
+      </div>
+    </div>
+
+    <div id="right">
+      <h2>Leaderboard</h2>
+      <div id="leaderboard"></div>
+      <div id="info">
+        <p>First to complete <span id="totalLaps">3</span> laps wins.</p>
+        <p id="status"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
